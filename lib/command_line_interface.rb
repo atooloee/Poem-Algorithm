@@ -11,36 +11,16 @@ class CommandLineInterface
     @@line_scores = {}
     
     def run
-        # poemfile = File.open("lepanto.txt")
         puts "Lepanto Line Finder"
         puts "\n"
         read_file
         greet
+        puts "\n"
         find_closest_line
-        # menu
-        #options
     end
 
     def greet
         puts "Can't remember a line from Lepanto? Enter what you do remember and we'll find it. \n"
-    end
-
-    def options
-
-
-        # Create new document from array of lines
-        #document1 = TfIdfSimilarity::Document.new(@@line_array[0])
-        # Ask for user input and create new document using said input.
-        #document2 = TfIdfSimilarity::Document.new(input)
-        # Declare corpus
-        #corpus = [document1, document2]
-        # Create model
-        #model = TfIdfSimilarity::TfIdfModel.new(corpus)
-        # Create Matrix
-        #matrix = model.similarity_matrix
-        # Compare similarity of documents in matrix.
-        #matrix[model.document_index(document1), model.document_index(document2)]
-        puts "Finding closest line.."
     end
 
     def read_file
@@ -105,7 +85,11 @@ class CommandLineInterface
         end
         #find the max score in @@line_scores and output associated line
         best_match_num = @@line_scores.key(@@line_scores.values.max)
-        puts "Your best match is line #{best_match_num}, which is:" 
+        if best_match_num <= 54 
+            puts "Your input was not specific enough to narrow it down to a specific line with high confidence, but it first occurs at line #{best_match_num}, which is: "
+        else
+            puts "Your best match is line #{best_match_num}, which is:"
+        end
         puts @@line_array[best_match_num - 1]
 
         

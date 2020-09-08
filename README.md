@@ -4,15 +4,9 @@ Tf-idf is useful because it values unique words highly and dicounts
 common words. As long as the user remembers at least one unique word, 
 we should be able to determine the correct line. 
 
-For example let's take a look at the given input, "his head a flag".
-Using out tf-idf formula we get the following results:
-
-tf-idf("flag", "lepanto.txt") = 
-tf-idf("a", "lepanto.txt") = 
-
 Implementation
 
-1. Document Processing
+1. Read File
     - iterate through each line of the poem
     - store the line in an array
     - count the total number of words in the line, update document total
@@ -22,10 +16,21 @@ Implementation
     the total number of words in the document by the instances 
     of the given word
 
-2. Analyzing User Input
+2. Find Best Match
     - get the user input
     - check that it has valid characters
     - get the lines where each word in the input appears
     - assign each of these lines a relevance score by taking the product
-    of all the scores assigned to the words found in that line 
+    of all the scores assigned to the input words found in that line 
     - output the line with the highest relevance score
+
+Instructions on How to Run (Assuming you have Ruby)
+    - fork and clone the repo to your local machine
+    - navigate to the project root directory in your terminal 
+    - enter `bundle install` in the terminal 
+    - if that doe not work, run `gem install bundler` and try again 
+    - enter `ruby bin/run.rb` in the terminal 
+    - enter the words from a line you remember 
+
+If you do not have Ruby you can download it here: https://www.ruby-lang.org/en/downloads/
+
