@@ -18,7 +18,6 @@ Implementation
 
 2. Find Best Match
     - get the user input
-    - check that it has valid characters
     - get the lines where each word in the input appears
     - assign each of these lines a relevance score by taking the product
     of all the scores assigned to the input words found in that line 

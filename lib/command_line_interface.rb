@@ -3,7 +3,7 @@ require 'tf-idf-similarity'
 require 'set'
 
 class CommandLineInterface
-
+    
     @@line_array = []
     @@total_words = 0
     @@unique_words = {}
