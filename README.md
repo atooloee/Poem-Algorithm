@@ -23,11 +23,11 @@ Implementation
     of all the scores assigned to the input words found in that line 
     - output the line with the highest relevance score
 
-Instructions on How to Run (Assuming you have Ruby)
+3. Instructions on How to Run (Assuming you have Ruby)
     - fork and clone the repo to your local machine
     - navigate to the project root directory in your terminal 
     - enter `bundle install` in the terminal 
-    - if that doe not work, run `gem install bundler` and try again 
+    - if that does not work, run `gem install bundler` and try again 
     - enter `ruby bin/run.rb` in the terminal 
     - enter the words from a line you remember 
 
